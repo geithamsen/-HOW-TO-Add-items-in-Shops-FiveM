@@ -1,0 +1,22 @@
+files {
+	'html/index.html',
+	'html/style.css',
+	'html/app.js',
+	'html/logo.png',
+	'html/Roboto-Regular.ttf',
+	'html/img/*.png',
+	'html/img/bread.png',
+	'html/img/fixkit.png',
+	'html/img/soda.png',
+	'html/img/banana.png',
+	'html/img/orange.png',
+	'html/img/donut.png',
+	'html/img/fixkit.png',
+	'html/img/energy.png',
+	'html/img/jusfruit.png',
+	'html/img/close.png',
+	'html/img/croquettes.png',
+	'html/img/water.png',
+	'html/img/phone.png',
+	'html/img/bolchips.png'
+}
