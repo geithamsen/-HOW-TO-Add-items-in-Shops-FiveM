@@ -1,5 +1,5 @@
 # -HOW-TO-Add-items-in-Shops-FiveM
-[HOW TO] Add items in Shops FiveM - this timne we adding a Hotdog
+[HOW TO] Add items in Shops FiveM - this time we adding a Hotdog
 
 https://youtu.be/3aAb82SpSbw  <- look at the video! 
 
