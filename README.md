@@ -1,73 +1,80 @@
 # EASY-HOW-TO-Add-items-in-Shops-FiveM
 [HOW TO] Add items in Shops FiveM - this time we adding a Hotdog
 
-https://youtu.be/3aAb82SpSbw  <- look at the video! 
+**[HOW TO] Add items in Shops FiveM - this time we adding a Hotdog**
 
-Check the codes here: 
-https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM
+https://youtu.be/3aAb82SpSbw <- look at the video!
 
-What you NEED: 
-You have the following: esx_basicneeds, esx_shops and [ESX] Shops UI: https://github.com/NeQYT/esx_shopsui (FREE)
+Check the codes here: https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM
 
-and find a PNG on google for a Hotdog, resize it be exactly 128x128 PX !important
-I added mine to the github :) 
-Download there: https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/hotdog.png
+**What you NEED:** You have the following: esx_basicneeds, esx_shops and [ESX] Shops UI: https://github.com/NeQYT/esx_shopsui (FREE)  - If you dont wanna use the ui you can skip the image part and the _resources.lua part :) (i think)
+
+and find a PNG on google for a Hotdog, resize it be exactly 128x128 PX !important I added mine to the github :) Download there: https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/hotdog.png
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-What you need for this:
+**What you need for this:**
 
-Notepad++ or just a notebad, either works.
-access to MySQL databases
-Access to resources folders:
-esx_basicneeds AND esx_shops/html/img
-txAdmin for restarting the server/or how ever you restart it.
+Notepad++ or just a notebad, either works. access to MySQL databases Access to resources folders: esx_basicneeds AND esx_shops/html/img txAdmin for restarting the server/or how ever you restart it.
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-Files, MySQL tables to be edited in order.
+**Files, MySQL tables to be edited in order.** 
 ⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤
 
-1) add the following to _resources.lua:
-https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/_resources.lua
-TIP: You can also add  'html/img/*.png' so that all images will be pulled from resources :)(easy way)
-
+1. add the following to _resources.lua: https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/_resources.lua TIP: You can also add 'html/img/*.png' so that all images will be pulled from resources folder html/img :)(easy way)
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-ITEMS TABLE: MySQL Databases and Tables to add
+**ITEMS TABLE: MySQL Databases and Tables to add** 
 ⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤
-1) Go to the table: items
-2) Copy the table(just the easy way to do it): bread
-3) edit/rename the name to: hotdog
-4) edit/rename the label to: Hotdog. -- label is the name that will show on the server
-5) click on the bottom: GO
+
+1. Go to the table: items
+2. Copy the table(just the easy way to do it): bread
+3. edit/rename the name to: hotdog
+4. edit/rename the label to: Hotdog. -- label is the name that will show on the server
+5. click on the bottom: GO
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-SHOPS TABLE: MySQL Databases and Tables to add
-⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤
-1) Go to the table: shops
-2) You probably only have 3 or 6 rows here for bread and water. So we are going to add 3 more rows. (if you have images, you can add: img/bread.png - to the bread under the row: imglink -same for water.)
-3) Copy the 'TwentyFourSeven' row
-4) edit/rename 'item' to: hotdog
-5) edit the price if you want to. 
-6) imglink you add: img/hotdog.png. 
-7) click on the bottom: GO
+**SHOPS TABLE: MySQL Databases and Tables to add** ⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤
 
-Repeat this to the: RobsLiquor table and LTDgasoline
-IMPORTANT!: EDIT THE ID OF THE TABLES! IN ORDER! 
-so you have 3 new rows with hotdog in the 3 shops. 
+1. Go to the table: shops
+2. You probably only have 3 or 6 rows here for bread and water. So we are going to add 3 more rows. (if you have images, you can add: img/bread.png - to the bread under the row: imglink -same for water.)
+3. Copy the 'TwentyFourSeven' row
+4. edit/rename 'item' to: hotdog
+5. edit the price if you want to.
+6. imglink you add: img/hotdog.png.
+7. click on the bottom: GO
+
+Repeat this to the: RobsLiquor table and LTDgasoline IMPORTANT!: EDIT THE ID OF THE TABLES! IN ORDER! so you have 3 new rows with hotdog in the 3 shops.
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-2) add the following to main.lua
-https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/main.lua
+2. add the following to main.lua https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/main.lua
+
+```
+ESX.RegisterUsableItem('hotdog', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	
+	xPlayer.removeInventoryItem('hotdog', 1)
+
+	TriggerClientEvent('esx_status:add', source, 'hunger', 1000000)
+	TriggerClientEvent('esx_basicneeds:onEat', source)
+	xPlayer.showNotification(_U('used_hotdog'))
+end)
+```
+
+You can edit the hunger number value to whatever you want. 
+You can also add thirst if you like, below 'hunger' if you like both thirst and hunger bars to increase. 
+
+```
+TriggerClientEvent('esx_status:add', source, 'thirst', 1000000)
+```
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-3) Add this to en.lua
-https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/en.lua
+3. Add this to en.lua https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/en.lua
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
@@ -75,4 +82,4 @@ Save these files.
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-Restart the server and tadaaaa :P 
+Restart the server and tadaaaa :P i hope.. 
