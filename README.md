@@ -3,79 +3,75 @@
 
 https://youtu.be/3aAb82SpSbw  <- look at the video! 
 
-You have the following: 
-esx_basicneeds, esx_shops and [ESX] Shops UI(https://github.com/NeQYT/esx_shopsui) (FREE)
+Check the codes here: 
+https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM
 
-Before you begin: 
-Add the following lines in _resources.lua(https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/_resources.lua)
+What you NEED: 
+You have the following: esx_basicneeds, esx_shops and [ESX] Shops UI: https://github.com/NeQYT/esx_shopsui (FREE)
 
-You can also add e.g: 	'html/img/*.png' so that all images will be pulled from resources :)(easy way)
+and find a PNG on google for a Hotdog, resize it be exactly 128x128 PX !important
+I added mine to the github :) 
+Download there: https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/hotdog.png
+
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
 What you need for this:
 
-1) Notepad++ or just a notebad, either works. 
-2) access to MySQL databases
-3) Access to resources folders: 
- - esx_basicneeds AND esx_shops/html/img
-4) txAdmin for restarting the server/or how ever you restart it. 
+Notepad++ or just a notebad, either works.
+access to MySQL databases
+Access to resources folders:
+esx_basicneeds AND esx_shops/html/img
+txAdmin for restarting the server/or how ever you restart it.
 
-Alright: first thing we are going to add the following to the following databases:
-Go MySQL -> servers databases -> items: 
-find 'bread' -> copy -> name: hotdog | label: Hotdog
-(Name will be pulled to database | label will be shown in the game)
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-///////////////////////////
+Files, MySQL tables to be edited in order.
+⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤
 
-GO TO: ITEMS 
-CLICK COPY E.G BREAD
-(LIKE I DO HERE) - look at the video
-
-///////////////////////////
-
-NAME: THE ITEM THAT SHOPS WILL PULL FROM DATABASE
-LABEL: WHAT WILL SHOW FOR USERS IN THE SHOP. 
-
-SO ADD 'hotdog' as name and Hotgod as label - AND CLICK GO
+1) add the following to _resources.lua:
+https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/_resources.lua
+TIP: You can also add  'html/img/*.png' so that all images will be pulled from resources :)(easy way)
 
 
-///////////////////////////
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-GO TO SHOPS DATABASE
-COPY THE 3 SHOPS AND 
-ADD THE FOLLOWING IN THE VIDEO. 
+ITEMS TABLE: MySQL Databases and Tables to add
+⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤
+1) Go to the table: items
+2) Copy the table(just the easy way to do it): bread
+3) edit/rename the name to: hotdog
+4) edit/rename the label to: Hotdog. -- label is the name that will show on the server
+5) click on the bottom: GO
 
-RENAME "ITEM" TO HOTDOG
-ADD UR PRICE
-AND IMGLINK TO WHERE YOU HAVE 
-THE PNG IMAGE STORED - I GOT MINE IN:
-\resources\[legacy]\[esx_addons]\esx_shops\html\img
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
+SHOPS TABLE: MySQL Databases and Tables to add
+⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤⌤
+1) Go to the table: shops
+2) You probably only have 3 or 6 rows here for bread and water. So we are going to add 3 more rows. (if you have images, you can add: img/bread.png - to the bread under the row: imglink -same for water.)
+3) Copy the 'TwentyFourSeven' row
+4) edit/rename 'item' to: hotdog
+5) edit the price if you want to. 
+6) imglink you add: img/hotdog.png. 
+7) click on the bottom: GO
 
-///////////////////////////
+Repeat this to the: RobsLiquor table and LTDgasoline
+so you have 3 new rows with hotdog in the 3 shops. 
 
-REMEMBER TO EDIT THE ID'S!! 
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-///////////////////////////
+2) add the following to main.lua
+https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/main.lua
 
-HERE WE ADD THE SHOP ITEM! 
-REMEBER THE TABLE WE ADDED TO
-ITEMS DATABASE: HOTDOG. 
-WE WILL USE THIS HERE ALSO. 
-THIS FILE IS LOCATED: 
-\resources\[legacy]\[esx_addons]\esx_basicneeds\server\main.lua
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-///////////////////////////
+3) Add this to en.lua
+https://github.com/geithamsen/-HOW-TO-Add-items-in-Shops-FiveM/blob/main/en.lua
 
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-IN THIS FILE YOU ADD THE ANNOUNCEMENT
-FOR THE USING AN ITEM, E.G HOTDOG. 
-IN THE LOCALES FOLDER. 
+Save these files.
 
-THIS IS LOCATED: 
-\resources\[legacy]\[esx_addons]\esx_basicneeds\locales\en.lua
+▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
 
-and thats it .
-
-Save and restart the server. 
-
-
+Restart the server and tadaaaa :P 
