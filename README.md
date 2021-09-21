@@ -56,6 +56,7 @@ SHOPS TABLE: MySQL Databases and Tables to add
 7) click on the bottom: GO
 
 Repeat this to the: RobsLiquor table and LTDgasoline
+IMPORTANT!: EDIT THE ID OF THE TABLES! IN ORDER! 
 so you have 3 new rows with hotdog in the 3 shops. 
 
 ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
